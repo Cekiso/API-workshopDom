@@ -12,16 +12,16 @@ const Template3 = Handlebars.compile(carsTemplates);
 
 
 //colors
-axios.get('http://api-tutor.herokuapp.com/v1/colors').then(function(result) {
+axios.get('https://api-tutor.herokuapp.com/v1/colors').then(function(result) {
     color.innerHTML = Template1({ colors: result.data })
 
 });
 //brand
-axios.get('http://api-tutor.herokuapp.com/v1/makes').then(function(result) {
+axios.get('https://api-tutor.herokuapp.com/v1/makes').then(function(result) {
     brand.innerHTML = Template2({ brands: result.data });
 });
 //cars
-axios.get('http://api-tutor.herokuapp.com/v1/cars').then(function(result) {
+axios.get('https://api-tutor.herokuapp.com/v1/cars').then(function(result) {
     car.innerHTML = Template3({ cars: result.data });
 
 })
