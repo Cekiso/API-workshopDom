@@ -17,33 +17,44 @@
         {{#each color}}
         <option value="{{this}}">{{this}}</option>
         {{/each}}
+    </script>
 
-        <script type="text/x-template" class="carsTemplate">
-            {{#each cars}}
-            <ul>
-                <li>{{this.model}}</li>
-            </ul>
-            {{/each}
-        </script>
+    <script type="text/x-template" class="carsTemplate">
+        {{#each list}}
+        <ul>
+            <li>{{color}}</li>
+            <li>{{brand}}</li>
+            <li>{{car}}</li>
+
+        </ul>
+        {{/each}}
+    </script>
+
 </header>
 
 <body>
     <h1>Filter widget</h1>
     <div>
-        <label for="color"></label>
+        <label for="color">Color:</label>
         <select class="colors">
            
         </select>
 
     </div>
+    <br>
     <div>
-        <label for="brand"></label>
+        <label for="brand">Brand:</label>
         <select class="brands">
            
         </select>
 
     </div>
-    <button type="submit">Submit</button>
+    <br>
+    <button type="submit" class="button">Submit</button>
+    <div class="car">
+
+    </div>
+
 </body>
 <script src="filter.js"></script>
 
