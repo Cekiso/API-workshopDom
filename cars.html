@@ -35,9 +35,16 @@
     </script>
     <script type="text/x-template" class="carsTemplate">
         {{#each cars}}
-        <ul>
-            <li>{{this.model}}</li>
-        </ul>
+        <table>
+            <tr>
+                <td>{{color}}</td>
+                <td>{{model}}</td>
+                <td>{{make}}</td>
+                <td>{{reg_number}}</td>
+                <td>{{price}}</td>
+
+            </tr>
+        </table>
         {{/each}}
     </script>
 </header>

@@ -15,20 +15,50 @@
     <script type="text/x-template" class="colorTemplate">
 
         {{#each color}}
+        <option>Select car:</option>
         <option value="{{this}}">{{this}}</option>
         {{/each}}
     </script>
+    <script type="text/x-template" class="brandTemplate">
 
-    <script type="text/x-template" class="carsTemplate">
-        {{#each list}}
-        <ul>
+        {{#each brands}}
+        <option>Select car:</option>
+        <option value="{{this}}">{{this}}</option>
+        {{/each}}
+        < </script>
+
+            <script type="text/x-template" class="carTemplates">
+                {{#each list}}
+                <table>
+                    <tr>
+                        <td>{{color}}</td>
+                        <td>{{brand}}</td>
+                        <td>{{car}}</td>
+                    </tr>
+                </table>
+                <!-- <ul>
             <li>{{color}}</li>
             <li>{{brand}}</li>
             <li>{{car}}</li>
 
-        </ul>
-        {{/each}}
-    </script>
+        </ul> -->
+                {{/each}}
+
+            </script>
+            <script type="text/x-template" class="carsTemplate">
+                {{#each cars}}
+                <table>
+                    <tr>
+                        <td>{{color}}</td>
+                        <td>{{model}}</td>
+                        <td>{{make}}</td>
+                        <td>{{reg_number}}</td>
+                        <td>{{price}}</td>
+
+                    </tr>
+                </table>
+                {{/each}}
+            </script>
 
 </header>
 
@@ -36,7 +66,7 @@
     <h1>Filter widget</h1>
     <div>
         <label for="color">Color:</label>
-        <select class="colors">
+        <select name='color' class="colors">
            
         </select>
 
@@ -45,13 +75,14 @@
     <div>
         <label for="brand">Brand:</label>
         <select class="brands">
-           
+
         </select>
 
     </div>
     <br>
     <button type="submit" class="button">Submit</button>
-    <div class="car">
+    <br><br>
+    <div class="cars">
 
     </div>
 
