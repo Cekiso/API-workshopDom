@@ -67,7 +67,9 @@ button.addEventListener('click', function() {
                 })
 
             }
+
         }
+
         console.log(list);
         let text = {
             'list': list
