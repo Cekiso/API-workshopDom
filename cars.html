@@ -34,8 +34,17 @@
 
     </script>
     <script type="text/x-template" class="carsTemplate">
-        {{#each cars}}
         <table>
+            <tr>
+                <th>Color</th>
+                <th>Model</th>
+                <th>Make</th>
+                <th>Cars</th>
+                <th>Price</th>
+
+            </tr>
+            {{#each cars}}
+
             <tr>
                 <td>{{color}}</td>
                 <td>{{model}}</td>
@@ -44,8 +53,9 @@
                 <td>{{price}}</td>
 
             </tr>
+
+            {{/each}}
         </table>
-        {{/each}}
     </script>
 </header>
 
