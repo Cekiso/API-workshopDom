@@ -36,15 +36,18 @@ axios.get('https://api-tutor.herokuapp.com/v1/cars').then(function(result) {
 })
 
 
-button.addEventListener('click', function() {
+
+const filtering = () => {
     let list = [];
     axios.get('https://api-tutor.herokuapp.com/v1/cars').then(function(result) {
-
+        // console.log(result.data);
         // console.log(color.value);
+        // console.log(brand.value);
+
         for (let i = 0; i < result.data.length; i++) {
             const element = result.data[i];
 
-            if (element.color == color.value && element.make == brand.value) {
+            if (element.make == brand.value && element.color == color.value) {
                 list.push({
                     color: `${element.color}`,
                     brand: `${element.make}`,
@@ -52,14 +55,15 @@ button.addEventListener('click', function() {
 
                 })
 
-            } else if (element.make == brand.value && element.color == '') {
+            } else if (element.make == brand.value && color.value == '') {
+
                 list.push({
                     color: `${element.color}`,
                     brand: `${element.make}`,
                     car: `${element.reg_number}`
                 })
 
-            } else if (element.color == color.value && element.make == '') {
+            } else if (element.color == color.value && brand.value == '') {
                 list.push({
                     color: `${element.color}`,
                     brand: `${element.make}`,
@@ -67,9 +71,7 @@ button.addEventListener('click', function() {
                 })
 
             }
-
         }
-
         console.log(list);
         let text = {
             'list': list
@@ -78,4 +80,7 @@ button.addEventListener('click', function() {
     })
 
 
-});
+
+}
+
+button.addEventListener('click', filtering)
