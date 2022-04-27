@@ -16,7 +16,9 @@ const Template1 = Handlebars.compile(colorTemplates.innerHTML);
 const Template4 = Handlebars.compile(brandTemplates.innerHTML);
 
 const Template2 = Handlebars.compile(carsTemplates.innerHTML);
+
 const Template3 = Handlebars.compile(carsTemplate.innerHTML);
+
 
 
 
@@ -32,6 +34,7 @@ axios.get('https://api-tutor.herokuapp.com/v1/makes').then(function(result) {
 //cars
 axios.get('https://api-tutor.herokuapp.com/v1/cars').then(function(result) {
     car.innerHTML = Template3({ cars: result.data });
+    model.innerHTML = Template2({ model: result.data })
 
 })
 
@@ -51,7 +54,10 @@ const filtering = () => {
                 list.push({
                     color: `${element.color}`,
                     brand: `${element.make}`,
-                    car: `${element.reg_number}`
+                    model: `${element.model}`,
+                    car: `${element.reg_number}`,
+                    price: `${element.price}`
+
 
                 })
 
@@ -60,14 +66,18 @@ const filtering = () => {
                 list.push({
                     color: `${element.color}`,
                     brand: `${element.make}`,
-                    car: `${element.reg_number}`
+                    model: `${element.model}`,
+                    car: `${element.reg_number}`,
+                    price: `${element.price}`
                 })
 
             } else if (element.color == color.value && brand.value == '') {
                 list.push({
                     color: `${element.color}`,
                     brand: `${element.make}`,
-                    car: `${element.reg_number}`
+                    model: `${element.model}`,
+                    car: `${element.reg_number}`,
+                    price: `${element.price}`
                 })
 
             }

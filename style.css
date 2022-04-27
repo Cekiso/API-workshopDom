@@ -1,5 +1,23 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #04AA6D;
+}
+
+.home {
+    list-style-type: none;
+    display: flex;
+    background-color: white;
+    color: white;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+}
+
+.intro {
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 table {
@@ -28,4 +46,14 @@ table th {
     text-align: left;
     background-color: #04AA6D;
     color: white;
+}
+
+.back a {
+    background-color: white;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
 }
